@@ -1,22 +1,24 @@
-/* General Styles */
-* {
+
+ {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #f3efe7; /* Linen Color */
-    font-family: 'Georgia', serif;
-    color: #4a443f;
-    line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #fcf9f2;
+  color: #2e1704;
 }
 
-h2 {
-    text-align: center;
-    margin: 40px 0;
-    font-weight: 300;
-    letter-spacing: 2px;
+.brand, h1, h2, h3, h4 {
+    font-family: "Yeseva One", serif; 
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px; 
 }
 
 .container {
@@ -25,7 +27,6 @@ h2 {
     padding: 20px;
 }
 
-/* Sticky Navbar */
 .navbar {
     position: sticky;
     top: 0;
@@ -39,23 +40,21 @@ h2 {
 }
 
 .brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
     letter-spacing: 1px;
 }
 
 nav a {
     text-decoration: none;
-    color: #4a443f;
+    color: #2e1704;
     text-transform: uppercase;
     font-size: 0.9rem;
 }
 
-/* Hero Section */
 .hero {
     height: 60vh;
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1200') no-repeat center center/cover;
+                url('cover-desktop.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,13 +63,23 @@ nav a {
     padding: 20px;
 }
 
-.hero h1 {
-    font-style: italic;
-    font-weight: 300;
-    font-size: 2rem;
+.hero-banner {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%; 
+    padding: 40px 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
 }
 
-/* About Section */
+.hero-banner h1 {
+    color: #211002;   
+    font-family: "Yeseva One", serif;
+    font-size: 2.5rem;
+    margin: 0;
+    max-width: 900px;  
+    margin: 0 auto;
+}
+
 .about {
     padding: 60px 20px;
     max-width: 700px;
@@ -107,7 +116,7 @@ nav a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(74, 68, 63, 0.4); /* Mesh-like layer */
+    background: rgba(74, 68, 63, 0.4);
     backdrop-filter: blur(2px);
     display: flex;
     justify-content: center;
@@ -130,12 +139,10 @@ nav a {
     transform: scale(1.05);
 }
 
-/* Flip Cards */
-.card-grid {
+.article-grid, .card-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Mobile */
-    gap: 30px;
-    perspective: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .flip-card {
@@ -188,13 +195,20 @@ nav a {
     text-align: center;
 }
 
-/* Responsive Tablet/Desktop Adjustments */
-@media (min-width: 768px) {
-    .article-grid, .card-grid {
-        grid-template-columns: repeat(3, 1fr);
+@media (max-width: 767px) { 
+    .hero {
+        background-image: url('cover-mobile.png'); 
+        height: 80vh; 
+        background-position: center center; 
     }
-    
-    .hero h1 {
-        font-size: 3rem;
+    .hero-banner {
+            padding: 30px 15px;
+    }
+    .hero-banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .article-grid, .card-grid {
+        grid-template-columns: 1fr;
     }
 }
