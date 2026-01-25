@@ -1,0 +1,200 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3efe7; /* Linen Color */
+    font-family: 'Georgia', serif;
+    color: #4a443f;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(243, 239, 231, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #e0dbd1;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a443f;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1200') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Article Grid (Square with Mesh Hover) */
+.article-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile */
+    gap: 20px;
+}
+
+.article-item {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.article-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 68, 63, 0.4); /* Mesh-like layer */
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.article-overlay span {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+.article-item:hover .article-overlay {
+    opacity: 1;
+}
+
+.article-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Flip Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile */
+    gap: 30px;
+    perspective: 1000px;
+}
+
+.flip-card {
+    background-color: transparent;
+    aspect-ratio: 1 / 1;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.flip-card-back {
+    background-color: #e0dbd1;
+    color: #4a443f;
+    transform: rotateY(180deg);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Responsive Tablet/Desktop Adjustments */
+@media (min-width: 768px) {
+    .article-grid, .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
