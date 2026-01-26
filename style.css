@@ -223,6 +223,7 @@ nav a {
 
 .article-card-img {
     flex: 1; 
+    min-height: 400px;
 }
 
 .article-card-img img {
