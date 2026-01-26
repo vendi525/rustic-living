@@ -203,7 +203,7 @@ nav a {
 }
 
 .article-card {
-    background: #faf9f6; /* Off-white surface */
+    background: #faf9f6;
     border-radius: 15px; /* Rounded edges */
     margin-bottom: 30px;
     overflow: hidden;
@@ -214,6 +214,8 @@ nav a {
     padding: 40px;
     text-align: center;
     font-style: italic;
+    line-height: 1.8;
+    font-size: 1.4rem;
 }
 
 .content-article-card {
@@ -234,6 +236,8 @@ nav a {
 
 .article-card-text {
     flex: 1;
+    line-height: 1.8;
+    font-size: 1.4rem;
     padding: 50px;
     display: flex;
     flex-direction: column;
