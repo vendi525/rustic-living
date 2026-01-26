@@ -236,12 +236,21 @@ nav a {
 
 .article-card-text {
     flex: 1;
-    line-height: 1.8;
-    font-size: 1.4rem;
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.article-card-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.article-card-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .affiliate-mini {
