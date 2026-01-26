@@ -217,7 +217,7 @@ nav a {
 }
 
 .content-article-card {
-    display: flex; /* Image left, Text right */
+    display: flex;
     align-items: stretch;
 }
 
@@ -232,8 +232,8 @@ nav a {
 }
 
 .article-card-text {
-    flex: 1
-    padding: 30px;
+    flex: 1;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
