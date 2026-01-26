@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 }
-
+body { background: red !important; }
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -16,9 +16,15 @@ body {
 
 .brand, h1, h2, h3, h4 {
     font-family: "Yeseva One", serif; 
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     letter-spacing: 1px; 
+}
+
+.tagline {
+    font-family: "Montserrat", sans-serif; 
+    font-size: 0.85rem;
+    color: #2e1704;
 }
 
 .container {
