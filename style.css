@@ -210,7 +210,7 @@ nav a {
     border: 1px solid #e0dbd1;
 }
 
-.intro-article-card, .conclusion-card {
+.bordered-article-card {
     padding: 40px;
     text-align: center;
     font-style: italic;
